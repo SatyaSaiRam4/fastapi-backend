@@ -3,7 +3,13 @@ from fastapi.middleware.cors import CORSMiddleware
 
 from users import routes as users
 from iteams import routes as items
+
+from connections import create_tables
+
 app = FastAPI()
+
+# Create database tables
+create_tables()
 
 # Add CORS middleware
 app.add_middleware(
@@ -16,7 +22,6 @@ app.add_middleware(
 
 app.include_router(users.router)
 app.include_router(items.router)
-
 
 @app.get("/")
 def home():
