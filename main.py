@@ -9,7 +9,7 @@ from connections import create_tables
 app = FastAPI()
 
 # Create database tables
-create_tables()
+# create_tables()
 
 # Add CORS middleware
 app.add_middleware(
