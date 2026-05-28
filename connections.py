@@ -80,6 +80,11 @@ from dotenv import load_dotenv
 load_dotenv()
 
 DATABASE_URL = os.getenv("DATABASE_URL")
+# DATABASE_URL = "postgresql://postgres.znttvqorufuzrkhdjjtc:postgres@aws-1-ap-southeast-1.pooler.supabase.com:6543/postgres?pgbouncer=true"
+
+
+
+# # Create the SQLAlchemy engine
 
 engine = create_engine(DATABASE_URL, echo=True)
 
